@@ -1,0 +1,7 @@
+{
+  "name": "MaisSaude",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

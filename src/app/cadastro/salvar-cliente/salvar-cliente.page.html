@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Agendamento</ion-title>
+    <ion-buttons>
+      <ion-back-button defaultHref="/"> </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Nome</ion-label>
+    <ion-input type="text" [(ngModel)]="cliente.nome"> </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Telefone:</ion-label>
+    <ion-input type="text" [(ngModel)]="cliente.telefone"> </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Hora</ion-label>
+    <ion-input type="text" [(ngModel)]="cliente.hora"> </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">data</ion-label>
+    <ion-input type="text" [(ngModel)]="cliente.data"> </ion-input>
+  </ion-item>
+
+
+<!------------------>
+
+
+
+<ion-list>
+  <ion-item>
+    <ion-label position="floating">Servicos</ion-label>
+    <ion-select [(ngModel)]="cliente.servico">
+      <ion-select-option *ngFor='let servicos of listaServico | async' [value]="servico">
+        {{servicos.servico}}
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+
+</ion-list>
+
+
+
+
+
+<!------------------>
+  <!--<ion-item >
+    <ion-label>servicos</ion-label>
+    <ion-select *ngFor="let servicos of listaServicos | async" [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Select One">
+      <ion-select-option></ion-select-option>
+    </ion-select>
+  </ion-item>-->
+
+
+  <ion-button color="success" expand="full" shape="round" (click)="salvar()"> Salvar </ion-button>
+
+</ion-content>

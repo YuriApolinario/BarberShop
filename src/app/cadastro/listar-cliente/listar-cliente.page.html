@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button defaultHref="/"> </ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Clientes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-list>
+
+    <ion-item *ngFor="let cliente of listaClientes | async">
+      <ion-label>{{cliente.nome}}</ion-label>
+     
+      <ion-label>{{cliente.data}}</ion-label>
+
+          <ion-button class="btn btn-danger" (click)="excluir(cliente.key)">
+          <ion-icon name="trash"></ion-icon>
+          </ion-button>
+
+    </ion-item>
+    
+    
+  </ion-list>
+
+
+</ion-content>

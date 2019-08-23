@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>servico</ion-title>
+    <ion-buttons>
+      <ion-back-button defaultHref="/"> </ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Servico</ion-label>
+    <ion-input type="text" [(ngModel)]="servico.servico"> </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Descricao</ion-label>
+    <ion-input type="text" [(ngModel)]="servico.descricao"> </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Valor</ion-label>
+    <ion-input type="text" [(ngModel)]="servico.valor"> </ion-input>
+  </ion-item>
+
+  <ion-button color="success" expand="full" shape="round" (click)="salvar()">salvar</ion-button>
+</ion-content>
