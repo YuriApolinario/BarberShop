@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-
+import { AngularFireAuth } from "angularfire2/auth";
 import { HomePage } from './home.page';
+import { ProviderAst } from '@angular/compiler';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { HomePage } from './home.page';
       }
     ])
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
+  providers: [AngularFireAuth]
 })
-export class HomePageModule {}
+export class HomePageModule { }

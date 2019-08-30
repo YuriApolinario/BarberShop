@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import {Cliente} from '../entidade/cliente'
 import { AngularFireDatabase } from '@angular/fire/database';
 import { map } from 'rxjs/operators';
+
 @Component({
   selector: 'app-listar-cliente',
   templateUrl: './listar-cliente.page.html',
@@ -30,7 +31,17 @@ export class ListarClientePage implements OnInit {
 
  }
 
- 
+/* filtrar(key: string){
+  this.listaClientes =  this.fire.list('cliente'),{
+    query:{
+      orderByChild:'nome',
+      equalTo: key
+    }
+  }) as Observable<Cliente[]>;
+  return this.listaClientes;
 
 
-}
+
+
+}*/
+ }

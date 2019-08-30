@@ -8,7 +8,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-
+import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 
@@ -25,7 +25,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
       messagingSenderId: "814945043362",
       appId: "1:814945043362:web:a2276af313fdd2c0"
   
-    }), AngularFireDatabaseModule
+    }), AngularFireDatabaseModule,
   
   ],
   providers: [
@@ -33,6 +33,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule {}

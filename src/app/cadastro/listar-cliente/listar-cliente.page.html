@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons>
-      <ion-back-button defaultHref="/"> </ion-back-button>
+      <ion-back-button defaultHref="principal"> </ion-back-button>
     </ion-buttons>
 
     <ion-title>Clientes</ion-title>
@@ -10,6 +10,18 @@
 
 <ion-content>
 
+
+
+<!-- Searchbar with cancel button shown on focus -->
+<!--<ion-searchbar showCancelButton="focus">
+  <ion-card>
+    <ion-option *ngFor="let cliente of listaClientes | async">
+      {{cliente.nome}}
+    </ion-option>
+  </ion-card>
+</ion-searchbar>
+
+-->
 
   <ion-list>
 

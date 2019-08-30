@@ -11,6 +11,8 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./lista-servicos.page.scss'],
 })
 export class ListaServicosPage implements OnInit {
+  servico: Servico = new Servico();
+
   listaServicos: Observable<Servico[]>;
   constructor(private fire: AngularFireDatabase) {
     this.listaServicos = this.fire.list<Servico>('servico').snapshotChanges().pipe(
@@ -21,6 +23,12 @@ export class ListaServicosPage implements OnInit {
   ngOnInit() {
   } 
   
+  excluir(key:string) {
+
+    this.fire.list('servico').remove(key);
+
+  }
+ 
   
  
 

@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons>
-      <ion-back-button defaultHref="/"> </ion-back-button>
+      <ion-back-button defaultHref="principal"> </ion-back-button>
     </ion-buttons>
 
     <ion-title>Servicos</ion-title>
@@ -17,6 +17,11 @@
       <ion-label>{{servicos.servico}}</ion-label>
       <ion-label>{{servicos.descricao}}</ion-label>
       <ion-label>{{servicos.valor}}</ion-label>
+
+        <ion-button class="btn btn-danger" (click)="excluir(servico.key)">
+          <ion-icon name="trash"></ion-icon>
+        </ion-button>
+
     </ion-item>
 
   </ion-list>

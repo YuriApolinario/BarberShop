@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'agendamento', loadChildren: './cadastro/agendamento/agendamento.module#AgendamentoPageModule' },
   { path: 'servicos', loadChildren: './cadastro/lista-servicos/lista-servicos.module#ListaServicosPageModule' },
   { path: 'edita-cliente', loadChildren: './edita-cliente/edita-cliente.module#EditaClientePageModule' },
+  { path: 'principal', loadChildren: './principal/principal.module#PrincipalPageModule' },
 
 ];
 
@@ -20,5 +21,6 @@ const routes: Routes = [
  
   ],
   exports: [RouterModule]
+  
 })
 export class AppRoutingModule { }
