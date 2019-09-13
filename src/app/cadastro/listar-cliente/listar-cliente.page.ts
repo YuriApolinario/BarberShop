@@ -4,7 +4,8 @@ import { Observable } from 'rxjs';
 import {Cliente} from '../entidade/cliente'
 import { AngularFireDatabase } from '@angular/fire/database';
 import { map } from 'rxjs/operators';
-
+import { SalvarClientePage } from '../salvar-cliente/salvar-cliente.page';
+import { ModalController } from '@ionic/angular';
 @Component({
   selector: 'app-listar-cliente',
   templateUrl: './listar-cliente.page.html',
@@ -17,8 +18,11 @@ export class ListarClientePage implements OnInit {
 
 
   listaClientes : Observable<Cliente[]>;
-  constructor(private fire : AngularFireDatabase) { 
-    this.listaClientes = this.fire.list<Cliente>('cliente').snapshotChanges().pipe(
+  constructor(
+    private fire: AngularFireDatabase, 
+    private modal: ModalController) { 
+    
+      this.listaClientes = this.fire.list<Cliente>('cliente').snapshotChanges().pipe(
     map(lista => lista.map( linha => ({key: linha.payload.key,... linha.payload.val() })))  
     );
   }
@@ -29,6 +33,14 @@ export class ListarClientePage implements OnInit {
   
    this.fire.list('cliente').remove(key);
 
+ }
+
+ async alterar(cliente: Cliente){
+   const tela = await this.modal.create({
+     component: SalvarClientePage,
+     componentProps: {cliente : cliente}
+   });
+   tela.present();
  }
 
 /* filtrar(key: string){

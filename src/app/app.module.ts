@@ -11,11 +11,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { SalvarClientePageModule } from './cadastro/salvar-cliente/salvar-cliente.module';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, SalvarClientePageModule,
     AngularFireModule.initializeApp({
       apiKey: "AIzaSyAlqjRTS5JPMIyR6Zp-xeaHH6a_5gbm1Fg",
       authDomain: "aulaprojeto-angular.firebaseapp.com",
