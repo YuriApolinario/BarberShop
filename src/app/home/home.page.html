@@ -1,67 +1,34 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Barber List
-    </ion-title>
-  </ion-toolbar>
+  
 </ion-header>
 
-<ion-content>
+<ion-content class="principal-custom">
 
 
 
+<div class="container">
 
+  <ion-card class="box">
+    <ion-card-header>
+    <ion-item >
 
+      <ion-input   type="text" aria-position="floating" placeholder="email" name="usuario" [(ngModel)]="usuario.email"></ion-input>
+    
+    </ion-item><br>
+    <ion-item>
+      <ion-input   aria-position="floating" type="password" placeholder="senha" name="senha" [(ngModel)]="usuario.senha"></ion-input>
+    
+    </ion-item>
+    
+      <!--<ion-button (click)="alterarSenha()">recuperar senha</ion-button> -->
+     
+      <a (click)="alterarSenha()">recuperar senha</a> <br/>
+      <ion-button color=" rgb(132, 45, 148);" (click)="logar()">Acessar</ion-button>
+      <ion-button  (click)="cadastrar()">Cadastrar</ion-button>
+    </ion-card-header>
+  </ion-card>  
 
-
-  <ion-input type="text" placeholder="email" name="usuario" [(ngModel)]="usuario.email"></ion-input>
-  <ion-input type="password" placeholder="senha" name="senha" [(ngModel)]="usuario.senha"></ion-input>
-  <ion-button  (click)="logar()">Acessar</ion-button>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-  <ion-button (click)="alterarSenha()">recuperar senha</ion-button>
-  
-  
-
-
+</div>
 
 
 </ion-content>

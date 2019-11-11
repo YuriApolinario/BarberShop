@@ -12,7 +12,9 @@ export class HomePage {
   usuario: Usuario = new Usuario();
 
   constructor(private afAuth: AngularFireAuth, private router: Router) { }
-
+  cadastrar(){
+    
+  }
   logar() {
     this.afAuth.auth.signInWithEmailAndPassword(this.usuario.email,
       this.usuario.senha).then((res) => {
